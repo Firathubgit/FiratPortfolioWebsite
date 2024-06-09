@@ -121,6 +121,47 @@ footer a {
     text-align: center;
 }
 
+/*ContactButton*/
+.redes {
+  width: 80px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: 1000;
+  bottom: 5%;
+}
+
+.redes a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  transition: all 0.2s ease-in-out;
+}
+
+.redes a svg {
+  width: 30px;
+  fill: #ffffff;
+}
+
+.redes .instagram {
+  background: linear-gradient(45deg, #833ab4, #fd1d1d, #f56040);
+  border-radius: 0 10px 0 0;
+}
+
+.redes .github {
+  background-color: rgb(24, 22, 22);
+  border-radius: 0 0 10px 0;
+}
+
+.redes a:hover {
+  width: 130%;
+  border-radius: 0 10px 10px 0;
+}
+
+
 section{
   padding: 20px;
   margin: 20px auto;
@@ -197,6 +238,70 @@ transform: scale(1.05);
   font-size: 20px;
   font-weight: 900;
 }
+/*BlackCard*/
+.outerBlack {
+  width: 100%;
+  height: 150px;
+  border-radius: 10px;
+  padding: 1px;
+  background: radial-gradient(circle 160vh at 50% 0%, #ffffff, #0c0d0d);
+  position: relative;
+  bottom: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensure no overflow */
+}
+
+.cardBlack {
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 9px;
+  border: solid 1px #202222;
+  background-size: 20px 20px;
+  background: radial-gradient(circle 50vh at 50% 50%, #444444, #0c0d0d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  flex-direction: row;
+  color: #fff;
+}
+
+.rayBlack {
+  width: 620px;
+  height: 100px;
+  border-radius: 100px;
+  position: absolute;
+  background-color: #c7c7c7;
+  opacity: 0.1;
+  box-shadow: 0 0 50px #fff;
+  filter: blur(40px);
+  transform-origin: 10%;
+  top: 0%;
+  left: 0;
+  transform: rotate(8deg);
+}
+
+.cardBlack .textBlack {
+  font-weight: bolder;
+  font-size: calc(2vw + 1rem); /* Dynamic font size */
+  white-space: nowrap; /* Ensure text stays on one line */
+  overflow: hidden; /* Prevent text overflow */
+  text-overflow: ellipsis; /* Add ellipsis if text overflows */
+  background: linear-gradient(10deg, #000000 0%, #fff, #000);
+  background-clip: text;
+  color: transparent;
+  transition: font-size 0.2s; /* Smooth transition for font size */
+}
+
+.cardBlack .iconsBlack{
+  width: 100px;
+  height: auto;
+  padding: 20px;
+}
+
 
 article{
   padding: 20px;
