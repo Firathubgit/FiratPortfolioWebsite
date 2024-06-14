@@ -4,33 +4,49 @@
   font-family: FutureisticFont;
   src: url("../fonts/Emizen.ttf");
 }
+
 @font-face {
   font-family: GhettoFont;
   src: url("../fonts/GhettoFont.ttf");
 }
+
 @font-face {
   font-family: ScriptoFont;
   src: url("../fonts/Scripto-2OR2v.ttf");
 }
 
+@font-face {
+  font-family: RobotoFlex;
+  src: url("../fonts/RobotoFlex-VariableFont_GRAD\,XOPQ\,XTRA\,YOPQ\,YTAS\,YTDE\,YTFI\,YTLC\,YTUC\,opsz\,slnt\,wdth\,wght.ttf");
+}
+
 
 /* Reset some basic elements for consistency across browsers */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Basic body styling */
 body {
-    line-height: 1.6;
-    color: #333;
-    background-color: #f4f4f4;
-    /*background-image: url("../downloads/Frame\ 1.png");
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  background-image: url("../images/BackgroundImageMainWebsite.png");
+  background-size: cover;
+  /* Make the background image cover the entire area */
+  background-repeat: no-repeat;
+  /* Prevent the background image from repeating */
+  background-position: center center;
+  /* Center the background image */
+  /*background-image: url("../downloads/Frame\ 1.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;*/
 }
+
+
 
 .video-background {
   position: fixed;
@@ -50,18 +66,26 @@ body {
   height: 100%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  object-fit: cover; /* Cover the entire container */
-  filter: blur(40px); /* Apply blur effect */
+  object-fit: cover;
+  /* Cover the entire container */
+  filter: blur(40px);
+  /* Apply blur effect */
 }
 
 /* Optional: Make sure content above the video is visible */
 .content {
   position: relative;
   z-index: 1;
-  color: white; /* Adjust text color as needed */
+  color: white;
+  /* Adjust text color as needed */
   text-align: center;
   top: 50%;
   transform: translateY(-50%);
+}
+
+a {
+  text-decoration: none;
+  /* Remove underline from the link */
 }
 
 button {
@@ -95,13 +119,15 @@ button:before {
   z-index: -1;
 }
 
-button:hover, button:focus {
+button:hover,
+button:focus {
   transform: scale(1.02);
   color: white;
   cursor: pointer;
 }
 
-button:hover:before, button:focus:before {
+button:hover:before,
+button:focus:before {
   transition: 0.5s all ease;
   left: 0;
   right: 0;
@@ -111,64 +137,65 @@ button:hover:before, button:focus:before {
 button:active {
   transform: scale(0.9);
 }
-.resumeBtn{
+
+.resumeBtn {
   display: flex;
   justify-content: left;
 }
 
 /* Container class to wrap content */
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Basic styling for header */
 header {
-    color: #fff;
-    padding: 20px 0;
+  color: #fff;
+  padding: 20px 0;
 }
 
 header a {
-    color: #000000;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: FutureisticFont;
-    font-size: 16px;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: FutureisticFont;
+  font-size: 16px;
 }
 
 header ul {
-    padding: 0;
-    list-style: none;
-    text-align: center;
+  padding: 0;
+  list-style: none;
+  text-align: center;
 }
 
 header ul li {
-    display: inline;
-    padding: 0 20px;
+  display: inline;
+  padding: 0 20px;
 }
 
 /* Basic styling for main content */
 main {
-    padding: 20px 0;
+  padding: 20px 0;
 }
 
 /* Basic styling for footer */
 footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
 }
 
 footer a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 /* Utility classes */
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 /*ContactButton*/
@@ -212,81 +239,154 @@ footer a {
 }
 
 
-section{
+section {
   padding: 20px;
   margin: 20px auto;
 }
 
 .defaultSection {
-  width: 95vw; /* Full width */
-  height: 100vh; /* Full height of viewport */
-  display: flex; /* Center content */
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
+  width: 95vw;
+  /* Full width */
+  height: 100vh;
+  /* Full height of viewport */
+  display: flex;
+  /* Center content */
+  justify-content: center;
+  /* Center content horizontally */
+  align-items: center;
+  /* Center content vertically */
   text-align: center;
-  flex-direction: row; /* Lay out children in a horizontal line */
-  outline: 2px solid red; /* width, style, and color of the outline */
+  flex-direction: row;
+  /* Lay out children in a horizontal line */
+  outline: 2px solid red;
+  /* width, style, and color of the outline */
+}
+
+/*SVG BLOB*/
+.defaultSection .stop1 {
+  stop-color: rgb(110, 0, 168);
+  stop-opacity: 1;
+}
+
+.defaultSection .stop2 {
+  stop-color: rgb(238, 0, 224);
+  stop-opacity: 1;
+}
+
+.defaultSection .svgBlob {
+  width: 900px;
+  height: 900px;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* Ensure the SVG is above the background image */
+}
+.svg-container {
+    position: relative;
+    width: 1000px; /* Adjust width and height to match your SVG */
+    height: 1000px; /* Adjust width and height to match your SVG */
+    margin-right: -10vh;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the entire container */
+    z-index: -1; /* Place the image behind the SVG */
 }
 
 .defaultSection .hero1Text {
-  font-family: GhettoFont, sans-serif;
-  font-size: clamp(2rem, 5vw, 8rem); /* Responsive font size */
+  font-family: RobotoFlex, sans-serif;
+  font-weight: 800;
+  font-size: clamp(1rem, 2.5vw, 4rem);
+  text-align: left;
+  /* Responsive font size */
   color: white;
-  text-shadow: 0 0 3px #3d3d3d, 0 0 5px #525252;
 }
 
-.defaultSection .title1Text{
-  text-align: left;
-  font-size: clamp(1rem, 2.5vw, 4rem); /* Responsive font size */
+.defaultSection .graidentText {
+  /* Gradient background */
+  background: linear-gradient(to bottom, #6E00A8, #EE00E0);
+  /* Set the background to clip to the text */
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.defaultSection h2{
+
+.defaultSection .title1Text {
+  text-align: left;
+  font-size: clamp(1rem, 2.5vw, 4rem);
+  /* Responsive font size */
+}
+
+.defaultSection h2 {
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: black;
   font-family: FutureisticFont;
   font-weight: lighter;
   color: white;
   text-shadow: 0 0 3px #3d3d3d, 0 0 5px #525252;
-  font-size: clamp(1rem, 2vw, 4rem); /* Responsive font size */
+  font-size: clamp(1rem, 2vw, 4rem);
+  /* Responsive font size */
 }
 
-.defaultSection p{
-  font-family: ScriptoFont;
+.defaultSection p { 
+  font-family: RobotoFlex;
+  font-weight:800;
   color: white;
-  text-shadow: 0 0 3px #3d3d3d, 0 0 5px #525252;
-  font-size: clamp(0.5rem, 1vw, 2rem); /* Responsive font size */
+  font-size: clamp(0.5rem, 1vw, 2rem);
+  /* Responsive font size */
 }
 
-.defaultSection .Section1Texts{
+.defaultSection .Section1Texts {
   margin-bottom: 1rem;
 }
-.defaultSection .FiratMainImage{
+
+.defaultSection .FiratMainImage {
   width: 300px;
   height: auto;
   margin-left: 10vh;
   margin-bottom: 10rem;
 }
 
-.defaultSection .FirstArticle{
+.defaultSection .FirstArticle {
   margin-bottom: 10rem;
 }
 
-.aboutMeSection{
-  width: 95vw; /* Full width */
-  height: 100vh; /* Full height of viewport */
-  display: flex; /* Center content */
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
+.aboutMeSection {
+  width: 95vw;
+  /* Full width */
+  height: 100vh;
+  /* Full height of viewport */
+  display: flex;
+  /* Center content */
+  justify-content: center;
+  /* Center content horizontally */
+  align-items: center;
+  /* Center content vertically */
   text-align: center;
-  flex-direction: column; /* Lay out children in a horizontal line */
-  outline: 2px solid red; /* width, style, and color of the outline */
+  flex-direction: column;
+  /* Lay out children in a horizontal line */
+  outline: 2px solid red;
+  /* width, style, and color of the outline */
 
 }
-.aboutMeSection .aboutMeH1Text{
+
+.aboutMeSection .aboutMeH1Text {
   position: absolute;
-  top: 5rem; /* Align to the top */
-  left: 5rem; /* Align to the left */
-  text-align: left; /* Align the text within the heading to the left */
-  font-size: clamp(2rem, 4vw, 8rem); /* Responsive font size */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+  top: 5rem;
+  /* Align to the top */
+  left: 5rem;
+  /* Align to the left */
+  text-align: left;
+  /* Align the text within the heading to the left */
+  font-size: clamp(2rem, 4vw, 8rem);
+  /* Responsive font size */
+  margin: 0;
+  /* Remove default margin */
+  padding: 0;
+  /* Remove default padding */
 }
 
 /*BlackCard*/
@@ -302,7 +402,9 @@ section{
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; /* Ensure no overflow */
+  overflow: hidden;
+  margin-bottom: -70vh;
+  /* Ensure no overflow */
 }
 
 .cardBlack {
@@ -338,14 +440,19 @@ section{
 
 .cardBlack .textBlack {
   font-weight: bolder;
-  font-size: calc(2vw + 1rem); /* Dynamic font size */
-  white-space: nowrap; /* Ensure text stays on one line */
-  overflow: hidden; /* Prevent text overflow */
-  text-overflow: ellipsis; /* Add ellipsis if text overflows */
+  font-size: calc(2vw + 1rem);
+  /* Dynamic font size */
+  white-space: nowrap;
+  /* Ensure text stays on one line */
+  overflow: hidden;
+  /* Prevent text overflow */
+  text-overflow: ellipsis;
+  /* Add ellipsis if text overflows */
   background: linear-gradient(10deg, #000000 0%, #fff, #000);
   background-clip: text;
   color: transparent;
-  transition: font-size 0.2s; /* Smooth transition for font size */
+  transition: font-size 0.2s;
+  /* Smooth transition for font size */
 }
 
 .cardBlack .iconsBlack {
@@ -355,58 +462,70 @@ section{
 }
 
 
-article{
+article {
   padding: 20px;
-  outline: 2px solid red; /* width, style, and color of the outline */
+  outline: 2px solid red;
+  /* width, style, and color of the outline */
 }
 
 .off-center-left {
-    margin-left: 20px; /* Adjust this value as needed */
+  margin-left: 20px;
+  /* Adjust this value as needed */
 }
 
 .off-center-right {
-    margin-right: 20px; /* Adjust this value as needed */
+  margin-right: 20px;
+  /* Adjust this value as needed */
 }
 
 .button {
-    font-size: 18px;
-    color: #222;
-    font-weight: 800;
-    cursor: pointer;
-    position: relative;
-    border: none;
-    background: none;
-    text-transform: uppercase;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: color;
-    text-decoration: none; /* Ensure there's no underline */
-    margin-left: 0%; /* Adjust this value as needed */
+  font-size: 18px;
+  color: #222;
+  font-weight: 800;
+  cursor: pointer;
+  position: relative;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
+  text-decoration: none;
+  /* Ensure there's no underline */
+  margin-left: 0%;
+  /* Adjust this value as needed */
 }
 
 .button:focus,
 .button:hover {
-    color: #222;
+  color: #222;
 }
 
 .button:focus:after,
 .button:hover:after {
-    width: 100%;
-    left: 0%;
+  width: 100%;
+  left: 0%;
 }
 
 .button:after {
-    content: "";
-    pointer-events: none;
-    bottom: -2px;
-    left: 50%;
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    background-color: #000000;
-    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition-duration: 400ms;
-    transition-property: width, left;
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #000000;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+.defaultSection .GradientShape{
+align-self: flex-end;
+width: 100%;
+height: 500px;
+  z-index: 1; /* Ensure the SVG is above the background image */
 }
 
 .fadeInOnScroll {
@@ -444,8 +563,8 @@ article{
   from {
     opacity: 0;
   }
+
   to {
     opacity: 1;
   }
 }
-
