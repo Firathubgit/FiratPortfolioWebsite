@@ -39,4 +39,14 @@ document.addEventListener('DOMContentLoaded', function() {
     // Trigger the animations once on page load
     handleScroll();
   });
+
+  //variable for accordion
+const accordionItemHeaders = document.querySelectorAll(".accordion-item-header");
   
+  //accordion start
+accordionItemHeaders.forEach(accordionItemHeader => {
+  accordionItemHeader.addEventListener("click", event => {
+      accordionItemHeader.classList.toggle("active");
+  });
+});
+//accordion end
