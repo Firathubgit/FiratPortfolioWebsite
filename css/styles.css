@@ -1,5 +1,6 @@
 /* styles.css */
 @import url("https://fonts.googleapis.com/css2?family=Fredericka+the+Great&family=Kaushan+Script&family=Poppins:wght@300;400;500;700&display=swap");
+
 @font-face {
   font-family: FutureisticFont;
   src: url("../fonts/Emizen.ttf");
@@ -26,18 +27,20 @@
 }
 
 :root {
-  --grey:#f4f2ff;
-  --dark-grey:#b7b7b7;
-  --green:#23ae00;
-  --light-green:#bdffac;
-  --dark-blue:#fe2727;
-  --light-red:#ffd2d2;
-  --blue:#277ffe;
-  --light-blue:#b6c6ff;
-  --dark-blue:#1368e3;
-  --yellow:#ffcc00; 
-  --bs:#aecfff;
-  --text:#9b9b9b;
+  --mainPurple: #6e00a8;
+  --mainPink: #f000e0;
+  --grey: #f4f2ff;
+  --dark-grey: #b7b7b7;
+  --green: #23ae00;
+  --light-green: #bdffac;
+  --dark-blue: #fe2727;
+  --light-red: #ffd2d2;
+  --blue: #277ffe;
+  --light-blue: #b6c6ff;
+  --dark-blue: #1368e3;
+  --yellow: #ffcc00;
+  --bs: #aecfff;
+  --text: #9b9b9b;
 }
 
 
@@ -46,6 +49,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /* Basic body styling */
@@ -66,7 +70,9 @@ body {
     background-position: center center;*/
 }
 
-
+html {
+  scroll-behavior: smooth;
+}
 
 .video-background {
   position: fixed;
@@ -90,6 +96,30 @@ body {
   /* Cover the entire container */
   filter: blur(40px);
   /* Apply blur effect */
+}
+
+#scrollBtn {
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: #000000;
+  background-color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  position: absolute;
+  top: 90%;
+  right: 20px;
+  position: fixed;
+  border: none;
+}
+
+#scrollBtn:hover {
+  background-color: var(--dark-blue);
+  color: #fff;
+  transition: 0.5s;
+}
+
+#scrollBtn.remove {
+  display: none;
 }
 
 /* Optional: Make sure content above the video is visible */
@@ -171,7 +201,7 @@ button:active {
   margin: 0 auto;
 }
 
-.containerInside{
+.containerInside {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -289,6 +319,16 @@ section {
   /* width, style, and color of the outline */
 }
 
+.Test {
+  mask-repeat: no-repeat;
+}
+
+.FaceImage {
+  margin-left: 300px;
+  margin-bottom: 150px;
+  width: 100px;
+}
+
 /*SVG BLOB*/
 .defaultSection .stop1 {
   stop-color: rgb(110, 0, 168);
@@ -305,37 +345,43 @@ section {
   height: 900px;
   width: 100%;
   height: 100%;
-  z-index: 1; /* Ensure the SVG is above the background image */
+  z-index: 1;
+  /* Ensure the SVG is above the background image */
 }
+
 .svg-container {
-    position: relative;
-    width: 1000px; /* Adjust width and height to match your SVG */
-    height: 1000px; /* Adjust width and height to match your SVG */
-    margin-right: -10vh;
+  position: relative;
+  width: 1000px;
+  /* Adjust width and height to match your SVG */
+  height: 1000px;
+  /* Adjust width and height to match your SVG */
+  margin-right: -10vh;
 }
 
 .background-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensure the image covers the entire container */
-    z-index: -1; /* Place the image behind the SVG */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensure the image covers the entire container */
+  z-index: -1;
+  /* Place the image behind the SVG */
 }
 
 .defaultSection .hero1Text {
   font-family: Hero1Font, sans-serif;
   font-weight: 100;
-  font-size: clamp(1rem, 2.5vw, 4rem);
+  font-size: 65px;
   text-align: left;
   /* Responsive font size */
   color: white;
 }
 
-.defaultSection .graidentText {
+.graidentText {
   /* Gradient background */
-  background: linear-gradient(to bottom, #6E00A8, #EE00E0);
+  background: linear-gradient(to bottom, #6E00A8, #f000e0);
   /* Set the background to clip to the text */
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -343,26 +389,25 @@ section {
 
 .defaultSection .title1Text {
   text-align: left;
-  font-size: clamp(1rem, 2.5vw, 4rem);
+  font-size: 65px;
   /* Responsive font size */
 }
 
-.defaultSection h2 {
-  -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: black;
-  font-family: FutureisticFont;
-  font-weight: lighter;
-  color: white;
+.defaultSection .under1text {
+  text-align: left;
+  font-size: 25px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
   text-shadow: 0 0 3px #3d3d3d, 0 0 5px #525252;
-  font-size: clamp(1rem, 2vw, 4rem);
   /* Responsive font size */
 }
 
-.defaultSection p { 
+.defaultSection p {
   font-family: RobotoFlex;
-  font-weight:800;
+  font-weight: 800;
   color: white;
-  font-size: clamp(0.5rem, 1vw, 2rem);
+  font-size: 25px;
   /* Responsive font size */
 }
 
@@ -421,9 +466,14 @@ section {
   font-family: "Poppins", sans-serif;
 
 }
-.about .container{
+
+.about .container {
   margin: auto;
   justify-content: center;
+  background-color: #000;
+
+  width: 106.2%;
+  margin-left: -3.1%;
 }
 
 .about-content .title {
@@ -432,27 +482,34 @@ section {
   font-size: 2rem;
   color: #fff;
   -webkit-animation: about-title 1s linear forwards;
-          animation: about-title 1s linear forwards;
+  animation: about-title 1s linear forwards;
 }
+
 .about-content .title span {
   color: #fff;
 }
+
 .about-content .title b {
   color: var(--dark-blue);
 }
+
 .about-content .SmallerLogo {
   width: 300px;
 }
+
 .about-content .accordion {
   width: 90%;
   max-width: 1000px;
   margin: 2rem auto;
+
 }
+
 .about-content .accordion .accordion-item {
   background-color: rgb(29, 28, 28);
   margin: 1rem 0;
   border-radius: 16px;
 }
+
 .about-content .accordion .accordion-item .accordion-item-header {
   color: #fff;
   padding: 0.5rem 3rem 0.5rem 1rem;
@@ -465,6 +522,7 @@ section {
   cursor: pointer;
   font-size: 22px;
 }
+
 .about-content .accordion .accordion-item .accordion-item-header::after {
   content: "+";
   font-size: 2rem;
@@ -473,27 +531,178 @@ section {
   color: #fff;
   transition: transform 0.5s ease-in-out;
 }
+
 .about-content .accordion .accordion-item .accordion-item-header.active::after {
   transform: rotate(45deg);
 }
+
 .about-content .accordion .accordion-item .accordion-item-body {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease-out;
 }
+
 .about-content .accordion .accordion-item .accordion-item-body-content {
   color: #fff;
   text-indent: 2.813rem;
   line-height: 1.5;
   padding: 1rem;
   border-top: 1px solid var(--dark-blue);
-  -o-border-image: linear-gradient(to right, var(--light-blue), var(--dark-blue), var(--yellow)) 1;
-     border-image: linear-gradient(to right, var(--light-blue), var(--dark-blue), var(--yellow)) 1;
+  -o-border-image: linear-gradient(to right, var(--mainPurple), var(--mainPink)) 1;
+  border-image: linear-gradient(to right, var(--mainPurple), var(--mainPink)) 1;
 }
-.about-content .accordion .accordion-item .accordion-item-header.active + .accordion-item-body {
+
+.about-content .accordion .accordion-item .accordion-item-header.active+.accordion-item-body {
   max-height: 250px;
 }
 
+/*OfferSection*/
+.offers {
+  background-color: #000000;
+  margin-top: 3.125rem;
+  position: relative;
+  outline: 2px solid red;
+}
+
+.offers .title {
+  text-align: center;
+  color: #fff;
+  margin: 1.875rem 0;
+}
+
+.offers-content .overlay {
+  width: 510px;
+  height: 410px;
+  border-radius: 1rem;
+  background-color: rgb(29, 28, 28);
+  position: absolute;
+  top: 200px;
+  left: 140px;
+  transform: rotate(5deg);
+}
+
+.offers-content .tabs .buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.tabs-p {
+  font-size: 16px;
+}
+
+.offers-content .tabs .buttons .tabs-btn {
+  margin-right: 0.5rem;
+}
+
+.offers-content .tabs .buttons .tabs-btn.working {
+  background-color: var(--mainPurple);
+}
+
+.offers-content .tabs .tabs-content {
+  margin: 1.25rem;
+  padding: 1.25rem;
+}
+
+.background-card-tabs {
+  width: 510px;
+  height: 410px;
+  border-radius: 1rem;
+  background-color: rgb(29, 28, 28);
+  position: absolute;
+  top: 200px;
+  left: 140px;
+  transform: rotate(5deg);
+}
+
+.offers-content .tabs .tabs-content .tabs-item {
+  justify-content: center;
+  padding: 0.938rem;
+  position: relative;
+  display: none;
+}
+
+.offers-content .tabs .tabs-content .tabs-item.working {
+  display: flex;
+}
+
+.offers-content .tabs .tabs-content .tabs-item .tabs-image {
+  width: 100%;
+}
+
+.offers-content .tabs .tabs-content .tabs-item .tabs-image .tabs-photo {
+  border-radius: 1rem;
+  width: 510px;
+  height: 410px;
+}
+
+.offers-content .tabs .tabs-content .tabs-item .info-text-box {
+  padding-left: 100px;
+  margin: auto;
+  justify-content: right;
+}
+
+.offers-content .tabs .tabs-content .tabs-item .info-text-box h3 {
+  color: #fff;
+}
+
+.offers-content .tabs .tabs-content .tabs-item .info-text-box p {
+  color: #fff;
+}
+
+.offers-content .tabs .tabs-content .tabs-item .info-text-box .info-text-box-btn {
+  position: absolute;
+  top: 379px;
+  right: 460px;
+}
+
+.partners {
+  background-color: #000000;
+  margin: 3.125rem 0;
+  outline: 2px solid red;
+  padding: 0 20px  ;
+  /* Adds 20px padding on the left and right */
+}
+
+.partners .container-partners{
+  margin: auto;
+  padding: 15px;
+  max-width: 1200px;
+}
+
+.partners .title {
+  color: #fff;
+  text-align: center;
+}
+
+.partners .title span {
+  color: var(--mainPink);
+}
+
+.partners-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.partners-content .partners-item {
+  width: calc(20% -20px);
+  margin: 20px;
+
+}
+
+.partners-content .partners-item .partner-photo {
+  width: 150px;
+  max-width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.partners-content .partners-item .partner-photo:hover {
+  /*background-color: var(--dark-blue);*/
+  transform: translateY(-15px);
+  transition: 0.5s;
+}
 
 /*BlackCard*/
 .outerBlack {
@@ -524,7 +733,7 @@ section {
   align-items: center;
   justify-content: center;
   position: relative;
-  flex-direction:column;
+  flex-direction: column;
   color: #fff;
 }
 
@@ -626,11 +835,12 @@ article {
   transition-property: width, left;
 }
 
-.defaultSection .GradientShape{
-align-self: flex-end;
-width: 100%;
-height: 500px;
-  z-index: 1; /* Ensure the SVG is above the background image */
+.defaultSection .GradientShape {
+  align-self: flex-end;
+  width: 100%;
+  height: 500px;
+  z-index: 1;
+  /* Ensure the SVG is above the background image */
 }
 
 .fadeInOnScroll {
@@ -673,31 +883,199 @@ height: 500px;
     opacity: 1;
   }
 }
+
 @-webkit-keyframes accordion {
   0% {
     transform: translateX(-800px);
   }
+
   100% {
     transform: translateX(0);
   }
 }
+
 @keyframes accordion {
   0% {
     transform: translateX(-800px);
   }
+
   100% {
     transform: translateX(0);
   }
 }
+
 @-webkit-keyframes services-animation {}
+
 @keyframes services-animation {}
+
 @-webkit-keyframes cards-animation {
   0% {
     opacity: 0;
     transform: rotateY(90deg);
   }
+
   100% {
     opacity: 1;
     transform: rotateY(0);
   }
 }
+
+@media(min-width: 2100px){
+  .background-card-tabs {
+    width: 510px;
+    height: 410px;
+    border-radius: 1rem;
+    background-color: rgb(29, 28, 28);
+    position: absolute;
+    top: 200px;
+    left: 600px;
+    transform: rotate(5deg);
+  }
+
+  .offers-content .tabs .tabs-content .tabs-item .tabs-image .tabs-photo {
+    border-radius: 1rem;
+    width: 510px;
+    height: 410px;
+    top: 200px;
+    left: 600px;
+    margin-left: 500px;
+  }
+
+  .FaceImage {
+    margin-left: 300px;
+    margin-bottom: 150px;
+    width: 600px;
+  }
+}
+
+@media (min-width: 1800px) and (max-width: 2100px){
+  /*StartPage*/
+  .FaceImage {
+    margin-left: 250px;
+    margin-bottom: 150px;
+    width: 500px;
+  }
+
+  .defaultSection .hero1Text {
+    font-size: 65px;
+  }
+
+  .defaultSection .title1Text {
+    font-size: 65px;
+    /* Responsive font size */
+  }
+
+  .defaultSection .under1text {
+    font-size: 25px;
+    /* Responsive font size */
+  }  
+
+  .defaultSection p {
+    font-size: 25px;
+    /* Responsive font size */
+  }
+}
+
+@media (min-width: 1300px) and (max-width: 1800px){
+  .FaceImage {
+    margin-left: 200px;
+    margin-bottom: 150px;
+    width: 400px;
+  }
+
+  .defaultSection .hero1Text {
+    font-size: 55px;
+  }
+
+  .defaultSection .title1Text {
+    font-size: 50px;
+    /* Responsive font size */
+  }
+
+  .defaultSection .under1text {
+    font-size: 20px;
+    /* Responsive font size */
+  }  
+
+  .defaultSection p {
+    font-size: 20px;
+    /* Responsive font size */
+  }
+
+}
+
+@media (min-width: 900px) and (max-width: 1300px){
+  .FaceImage {
+    margin-left: 150px;
+    margin-bottom: 150px;
+    width: 300px;
+  }
+
+  .defaultSection .hero1Text {
+    font-size: 35px;
+  }
+
+  .defaultSection .title1Text {
+    font-size: 35px;
+    /* Responsive font size */
+  }
+
+  .defaultSection .under1text {
+    font-size: 15px;
+    /* Responsive font size */
+  }  
+
+  .defaultSection p {
+    font-size: 15px;
+    /* Responsive font size */
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1300px){
+
+  .defaultSection{
+    flex-direction: column;
+    height: 99vh;
+  }
+
+  .defaultSection .FirstArticle {
+    margin-top: 20rem;
+  }
+
+  .FaceImage {
+    margin-left: 10px;
+    margin-bottom: 200px;
+    width: 500px;
+    top: 100px;
+  }
+
+  .defaultSection .hero1Text {
+    font-size: 50px;
+    width: 800px;
+    text-align: center;
+  }
+
+  .defaultSection .title1Text {
+    font-size: 40px;
+    text-align: center;
+    /* Responsive font size */
+  }
+
+  .defaultSection .under1text {
+    font-size: 15px;
+    text-align: center;
+    /* Responsive font size */
+  }  
+
+  .defaultSection p {
+    font-size: 15px;
+    text-align: center;
+    /* Responsive font size */
+  }
+
+  .resumeBtn {
+    display: flex;
+    justify-content: center;
+  }
+}
+
