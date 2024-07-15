@@ -659,11 +659,11 @@ section {
   background-color: #000000;
   margin: 3.125rem 0;
   outline: 2px solid red;
-  padding: 0 20px  ;
+  padding: 0 20px;
   /* Adds 20px padding on the left and right */
 }
 
-.partners .container-partners{
+.partners .container-partners {
   margin: auto;
   padding: 15px;
   max-width: 1200px;
@@ -920,7 +920,7 @@ article {
   }
 }
 
-@media(min-width: 2100px){
+@media(min-width: 2100px) {
   .background-card-tabs {
     width: 510px;
     height: 410px;
@@ -948,7 +948,8 @@ article {
   }
 }
 
-@media (min-width: 1800px) and (max-width: 2100px){
+@media (min-width: 1800px) and (max-width: 2100px) {
+
   /*StartPage*/
   .FaceImage {
     margin-left: 250px;
@@ -968,7 +969,7 @@ article {
   .defaultSection .under1text {
     font-size: 25px;
     /* Responsive font size */
-  }  
+  }
 
   .defaultSection p {
     font-size: 25px;
@@ -976,7 +977,7 @@ article {
   }
 }
 
-@media (min-width: 1300px) and (max-width: 1800px){
+@media (min-width: 1300px) and (max-width: 1800px) {
   .FaceImage {
     margin-left: 200px;
     margin-bottom: 150px;
@@ -995,7 +996,7 @@ article {
   .defaultSection .under1text {
     font-size: 20px;
     /* Responsive font size */
-  }  
+  }
 
   .defaultSection p {
     font-size: 20px;
@@ -1004,7 +1005,7 @@ article {
 
 }
 
-@media (min-width: 900px) and (max-width: 1300px){
+@media (min-width: 900px) and (max-width: 1300px) {
   .FaceImage {
     margin-left: 150px;
     margin-bottom: 150px;
@@ -1023,7 +1024,7 @@ article {
   .defaultSection .under1text {
     font-size: 15px;
     /* Responsive font size */
-  }  
+  }
 
   .defaultSection p {
     font-size: 15px;
@@ -1031,21 +1032,25 @@ article {
   }
 }
 
-@media (min-width: 900px) and (max-width: 1300px){
+@media (min-width: 900px) and (max-width: 1300px) {
 
-  .defaultSection{
+  .defaultSection {
     flex-direction: column;
-    height: 99vh;
   }
 
   .defaultSection .FirstArticle {
-    margin-top: 20rem;
+    top: 100px;
+    position: absolute;
+  }
+
+  .MainFaceImageContainer {
+    margin-bottom: 00px;
   }
 
   .FaceImage {
     margin-left: 10px;
-    margin-bottom: 200px;
-    width: 500px;
+    margin-top: 400px;
+    width: 600px;
     top: 100px;
   }
 
@@ -1065,7 +1070,7 @@ article {
     font-size: 15px;
     text-align: center;
     /* Responsive font size */
-  }  
+  }
 
   .defaultSection p {
     font-size: 15px;
@@ -1079,3 +1084,61 @@ article {
   }
 }
 
+@media (min-width: 400px) and (max-width: 900px) {
+
+  .defaultSection {
+    flex-direction: column;
+  }
+
+  .defaultSection .FirstArticle {
+    top: 100px;
+    position: absolute;
+  }
+
+  .MainFaceImageContainer {
+    margin-bottom: 00px;
+  }
+
+  .FaceImage {
+    margin-left: 10px;
+    margin-top: 400px;
+    width: 450px;
+    top: 100px;
+  }
+
+  .defaultSection .hero1Text {
+    font-size: 40px;
+    width: 800px;
+    text-align: center;
+  }
+
+  .defaultSection .title1Text {
+    font-size: 32px;
+    text-align: center;
+    /* Responsive font size */
+  }
+
+  .defaultSection .under1text {
+    font-size: 13px;
+    text-align: center;
+    /* Responsive font size */
+  }
+
+  .defaultSection p {
+    font-size: 13px;
+    text-align: center;
+    /* Responsive font size */
+  }
+
+  .resumeBtn {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    font-size: medium;
+    font-weight: 700;
+    margin-top: 20px;
+    margin-left: 22rem;
+    display: flex;
+    justify-content: center;
+  }
+}
