@@ -677,6 +677,8 @@ section {
 .partners .title {
   color: #fff;
   text-align: center;
+  font-size: 35px;
+  font-family: "Poppins", sans-serif;
 }
 
 .partners .title span {
@@ -1791,7 +1793,6 @@ article {
 .tabs-content{
   display: flex;
   justify-content: center;
-  flex-direction: ;
   outline: 2px solid red;
 }
 
@@ -1877,7 +1878,7 @@ article {
   right: 460px;
 }
 .partners-content .partners-item .partner-photo {
-  width: 100px;
+  width: 60px;
   max-width: 100%;
   height: auto;
   cursor: pointer;
