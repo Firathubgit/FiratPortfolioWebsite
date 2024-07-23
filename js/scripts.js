@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     var fadeInElements = document.querySelectorAll('.fadeInOnScroll');
     var fadeAnimElements = document.querySelectorAll('.FadeAnimOnScroll');
+
+    
   
     function fadeInOnScroll(elements) {
       elements.forEach(function(element) {
@@ -47,6 +49,7 @@ const topBtn = document.querySelector("#scrollBtn");
 //variables for offer tab
 const tabsBtn   = document.querySelectorAll(".tabs-btn");
 const tabsItems = document.querySelectorAll(".tabs-item");
+let cont = document.querySelector(".img-carousel");
 
 
 //accordion start
@@ -112,4 +115,20 @@ function onTabClick(item) {
 
 document.querySelector('.tabs-btn').click();
 //tabs end
+
+//Carusel
+
+gsap.to("img", {
+  ease: "none",
+  x: () => -(cont.scrollWidth - window.innerWidth),
+  scrollTrigger: {
+    trigger: cont,
+    pin: cont,
+    start: "center center",
+    end: () => "+=" + (cont.scrollWidth - window.innerWidth),
+    scrub: true,
+    invalidateOnRefresh: true,
+    markers: true,
+  }
+});
 

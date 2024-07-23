@@ -302,9 +302,9 @@ section {
 }
 
 .defaultSection {
-  width: 95vw;
+  width: 100vw;
   /* Full width */
-  height: 100vh;
+  height: 110vh;
   /* Full height of viewport */
   display: flex;
   /* Center content */
@@ -319,6 +319,23 @@ section {
   /* width, style, and color of the outline */
 }
 
+.carousel{
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  /*   height: 300vh; */
+  /* overflow-x: hidden; */
+  background-color: #161616;
+}
+
+.img-carousel {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
 .Test {
   mask-repeat: no-repeat;
 }
@@ -327,6 +344,7 @@ section {
   margin-left: 300px;
   margin-bottom: 150px;
   width: 100px;
+  animation: floatImage 4s ease-in-out infinite;
 }
 
 /*SVG BLOB*/
@@ -424,6 +442,14 @@ section {
 
 .defaultSection .FirstArticle {
   margin-bottom: 10rem;
+}
+
+.about-img{
+  padding-right: 200px;
+
+  margin-bottom: 150px;
+  width: 40vw;
+  outline: white;
 }
 
 .aboutMeSection {
@@ -879,6 +905,20 @@ article {
 
 .fade-in-on-start {
   animation: fadeinonstart 1s ease-in;
+}
+
+@keyframes floatImage {
+  0%{
+    transform: translateY(0);
+  }
+
+  50%{
+    transform: translateY(-2rem);
+  }
+
+  100%{
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeinonstart {
@@ -1804,6 +1844,7 @@ article {
 
 .tabs-p {
   font-size: 8px;
+  font-weight: 1000;
 }
 
 .offers-content .tabs .buttons .tabs-btn {
