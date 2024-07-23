@@ -1,338 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gsap Scroll Animation</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    
+<div class="space-50vh lightBG"></div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+<div class="racesWrapper">
+	<div class="races">
+        <div class="Part">HEJ</div>
+        <div class="Part">HEJ</div>
+        <div class="Part">HEJ</div>
+        <div class="Part">HEJ</div>
+        <div class="Part">HEJ</div>
+        <div class="Part">HEJ</div>
+        <div class="Part">HEJ</div>
+        <div class="Part">HEJ</div>
+        <div class="Part">HEJ</div>
+        <div class="Part">HEJ</div>
 
-<body>
+	</div>
+</div>
 
-    <!-- Header Section -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About me</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<div class="space-100vh lightBG"></div>
 
-    <!-- Main Content -->
-    <!--    <div class="video-background">
-        <video autoplay muted loop id="bgVideo">
-            <source src="images/MainBackgroundAnimGif.mp4" type="video/mp4">
-            <source src="your-video.webm" type="video/webm">
-            Your browser does not support the video tag.
-        </video>
-    </div> -->
-
-
-
-    <div class="redes">
-        <a href="https://www.instagram.com/atal_moretti/" class="instagram">
-            <svg fill-rule="nonzero" height="25px" width="25px" viewBox="0,0,550,550" fill="#ffffff"
-                xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
-                </path>
-            </svg>
-        </a>
-
-        <a href="https://github.com/Firathubgit" class="github">
-            <svg class="github" height="25px" width="25px" viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg">
-                <path
-                    d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z">
-                </path>
-            </svg>
-        </a>
-    </div>
-
-
-    <section class="defaultSection first">
-        <article class="FirstArticle">
-            <!-- -->
-            <p class="Section1Texts title1Text fade-in-on-start">Fullstack Gamedev +</p>
-            <h1 class="Section1Texts hero1Text text-center fade-in-on-start">Welcome to my<span
-                    class="Section1Texts hero1Text text-center graidentText fade-in-on-start"> Website!</span></h1>
-            <h2 class="under1text fade-in-on-start">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Non
-                eveniet sapiente saepe, veritatis laborum debitis,<br> asperiores eius omnis nihil facilis excepturi
-                dolore. Reiciendis <br>placeat quisquam similique voluptas dolores odio eius!</h2>
-
-            <a href="downloads/CV2024.pdf" download="CV2024.pdf">
-                <button class="resumeBtn fade-in-on-start">Resume</button>
-            </a>
-
-
-
-        </article>
-        <!--
-                        <p>This is some content within the section.</p>
-                    <a href="portfolio.html" class="button">My work</a>
-                    -->
-
-        <div class="MainFaceImageContainer fade-in-on-start"><img class="FaceImage"
-                src="images/FaceImageMainMAINMIAN.png" alt=""></div>
-
-
-
-
-
-    </section>
-    <section class="defaultSection first">
-
-        <div class="MainFaceImageContainer fade-in-on-start"><img class="FaceImage about-img"
-                src="images/ControllerImage.png" alt=""></div>
-
-        <article class="FirstArticle">
-            <!-- -->
-            <p class="Section1Texts title1Text fade-in-on-start">Fullstack Gamedev +</p>
-            <h1 class="Section1Texts hero1Text text-center fade-in-on-start">Welcome to my<span
-                    class="Section1Texts hero1Text text-center graidentText fade-in-on-start"> Website!</span></h1>
-            <h2 class="under1text fade-in-on-start">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>Non
-                eveniet sapiente saepe, veritatis laborum debitis,<br> asperiores eius omnis nihil facilis excepturi
-                dolore. Reiciendis <br>placeat quisquam similique voluptas dolores odio eius!</h2>
-
-            <a href="downloads/CV2024.pdf" download="CV2024.pdf">
-                <button class="resumeBtn fade-in-on-start">Resume</button>
-            </a>
-
-
-
-        </article>
-        <!--
-                        <p>This is some content within the section.</p>
-                    <a href="portfolio.html" class="button">My work</a>
-                    -->
-
-
-
-
-
-
-
-    </section>
-    <section class="aboutMeSection about" id="about">
-        <div class="container">
-            <div class="about-content fade-in-on-start">
-                <h1 class="title">Bakom Mitt Arbete, <span class="graidentText">Firat kaya</span></h1>
-                <div class="accordion" id="accordion">
-                    <div class="accordion-item">
-                        <div class="accordion-item-header">Översikt</div>
-                        <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                                irure dolor in reprehenderit in voluptate velit esse cillum
-                                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <div class="accordion-item-header">Kund Fokus</div>
-                        <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                                irure dolor in reprehenderit in voluptate velit esse cillum
-                                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <div class="accordion-item-header">Lednings grupp</div>
-                        <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                                irure dolor in reprehenderit in voluptate velit esse cillum
-                                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="accordion-item">
-                        <div class="accordion-item-header">Framgångs faktor</div>
-                        <div class="accordion-item-body">
-                            <div class="accordion-item-body-content">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                                irure dolor in reprehenderit in voluptate velit esse cillum
-                                dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--SECTION BEGINING-->
-    <!--
-    <section class="offers">
-        <div class="container fade-in-on-start">
-            <h1 class="title">What we can offer?</h1>
-            <div class="offers-content">
-                <div class="background-card-tabs"></div>
-                <div class="tabs">
-                    <div class="buttons">
-                        <button class="tabs-btn btn-animated" type="button"
-                            data-tab="#tab-1"><span>Luxury</span></button>
-                        <button class="tabs-btn btn-animated" type="button"
-                            data-tab="#tab-3"><span>Electric</span></button>
-                        <button class="tabs-btn btn-animated" type="button"
-                            data-tab="#tab-2"><span>Econom</span></button>
-                        <button class="tabs-btn btn-animated" type="button"
-                            data-tab="#tab-5"><span>Sport</span></button>
-                        <button class="tabs-btn btn-animated" type="button"
-                            data-tab="#tab-4"><span>Jeeps</span></button>
-                    </div>
-                    <div class="tabs-content">
-                        <div class="tabs-item" id="tab-1">
-                            <div class="tabs-image">
-                                <img src="./images/Icons/image-500x400Html.jpg" class="tabs-photo" alt="">
-                            </div>
-                            <div class="info-text-box">
-                                <h3>Luxury Cars</h3>
-                                <p class="tabs-p">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam commodi officia,
-                                    corporis sed voluptate eius neque odit, totam repellendus voluptatibus temporibus
-                                    quod
-                                </p>
-                            </div>
-                        </div>
-                        <div class="tabs-item" id="tab-2">
-                            <div class="tabs-image">
-                                <img src="./images/Icons/icons8-css3-500.png" class="tabs-photo" alt="">
-                            </div>
-                            <div class="info-text-box">
-                                <h3>Econom Cars</h3>
-                                <p class="tabs-p">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam commodi officia,
-                                    corporis sed voluptate eius neque odit, totam repellendus voluptatibus temporibus
-                                    quod
-                                    sapiente deserunt, harum distinctio ut cum tenetur blanditiis.
-                                </p>
-                                <button class="info-text-box-btn btn-animated"><span>Se mer</span></button>
-                            </div>
-                        </div>
-                        <div class="tabs-item" id="tab-3">
-                            <div class="tabs-image">
-                                <img src="./Media/Other/offer-electric.jpg" class="tabs-photo" alt="">
-                            </div>
-                            <div class="info-text-box">
-                                <h3>Electric Cars</h3>
-                                <p class="tabs-p">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam commodi officia,
-                                    corporis sed voluptate eius neque odit, totam repellendus voluptatibus temporibus
-                                    quod
-                                    sapiente deserunt, harum distinctio ut cum tenetur blanditiis.
-                                </p>
-                                <button class="info-text-box-btn btn-animated"><span>se mer</span></button>
-                            </div>
-                        </div>
-                        <div class="tabs-item" id="tab-4">
-                            <div class="tabs-image">
-                                <img src="./Media/Other/offer-jeep.jpg" class="tabs-photo" alt="">
-                            </div>
-                            <div class="info-text-box">
-                                <h3>Jeep Cars</h3>
-                                <p class="tabs-p">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam commodi officia,
-                                    corporis sed voluptate eius neque odit, totam repellendus voluptatibus temporibus
-                                    quod
-                                    sapiente deserunt, harum distinctio ut cum tenetur blanditiis.
-                                </p>
-                                <button class="info-text-box-btn btn-animated"><span>se mer</span></button>
-                            </div>
-                        </div>
-                        <div class="tabs-item" id="tab-5">
-                            <div class="tabs-image">
-                                <img src="./Media/Other/offer-sport.jpg" class="tabs-photo" alt="">
-                            </div>
-                            <div class="info-text-box">
-                                <h3>Sport Cars</h3>
-                                <p class="tabs-p">
-                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam commodi officia,
-                                    corporis sed voluptate eius neque odit, totam repellendus voluptatibus temporibus
-                                    quod
-                                    sapiente deserunt, harum distinctio ut cum tenetur blanditiis.
-                                </p>
-                                <button class="info-text-box-btn btn-animated"><span>se mer</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    -->
-    <!--SECTION END-->
-
-    <!--SECTION BEGIN-->
-    <div class="partners">
-        <div class="container-partners fade-in-on-start">
-            <h1 class="title">Mina <span>Egenskaper</span></h1>
-            <div class="partners-content">
-                <div class="partners-item">
-                    <img src="./images/Icons/icons8-unity-500.png" alt="" class="partner-photo">
-                </div>
-                <div class="partners-item">
-                    <img src="./images/Icons/cSharpLogo.png" alt="" class="partner-photo">
-                </div>
-                <div class="partners-item">
-                    <img src="./images/Icons/icons8-html-5-500.png" alt="" class="partner-photo">
-                </div>
-                <div class="partners-item">
-                    <img src="./images/Icons/icons8-css3-500.png" alt="" class="partner-photo">
-                </div>
-                <div class="partners-item">
-                    <img src="./images/Icons/icons8-javascript-logo-500.png" alt="" class="partner-photo">
-                </div>
-                <div class="partners-item">
-                    <img src="./images/Icons/ReactLogoIcon.png" alt="" class="partner-photo">
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--SECTION END-->
-    <section class="">
-        <div class="img-carousel">
-            <img src="https://placehold.co/600x400" alt="" />
-            <img src="https://placehold.co/600x400" alt="" />
-            <img src="https://placehold.co/600x400" alt="" />
-            <img src="https://placehold.co/600x400" alt="" />
-            <img src="https://placehold.co/600x400" alt="" />
-        </div>
-
-
-    </section>
-
-
-    <footer>
-        <p>&copy; 2024 FiratKaya. All Rights Reserved.</p>
-        <p>Contact me at <a href="Firat05_@hotmail.com">Firat05_@hotmail.com</a></p>
-    </footer>
-
-    <button id="scrollBtn" onclick="topFunction()">Back</button>
-    <!-- Link to JavaScript File -->
-    <script src="node_modules/gsap/dist/gsap.min.js"></script>
-    <script src="node_modules/gsap/dist/ScrollTrigger.min.js"></script>
-    <script src="./js/scripts.js"></script>
-</body>
-
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
 </html>
+<!---		<h2>Monaco</h2>
+		<h2>Austria</h2>
+		<h2>Hungary</h2>
+		<h2>Netherlands</h2>
+		<h2>Japan</h2>-->
