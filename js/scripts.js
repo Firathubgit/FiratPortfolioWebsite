@@ -88,36 +88,9 @@ function togglePopup(popupId) {
 //popup end
 
 
-//tabs start
-tabsBtn.forEach(onTabClick);
-
-function onTabClick(item) {
-    item.addEventListener("click", function() {
-        let currentBtn = item;
-        let tabId = currentBtn.getAttribute("data-tab");
-        let currentTab = document.querySelector(tabId);
-
-        if( ! currentBtn.classList.contains('working') ) {
-            tabsBtn.forEach(function(item) {
-                item.classList.remove('working');
-            });
-    
-            tabsItems.forEach(function(item) {
-                item.classList.remove('working');
-                console.log("1000");
-            });
-    
-            currentBtn.classList.add('working');
-            currentTab.classList.add('working');
-        }
-    });
-}
-
-document.querySelector('.tabs-btn').click();
-//tabs end
-
 //Carusel
 
+/*
 gsap.to("img", {
   ease: "none",
   x: () => -(cont.scrollWidth - window.innerWidth),
@@ -130,5 +103,37 @@ gsap.to("img", {
     invalidateOnRefresh: true,
     markers: true,
   }
+});*/
+
+// master GSAP and ScrollTrigger
+// https://www.creativeCodingClub.com
+// Unlock over 250 video lessons
+
+
+const races = document.querySelector(".races");
+console.log(races.offsetWidth)
+
+function getScrollAmount() {
+	let racesWidth = races.scrollWidth;
+	return -(racesWidth - window.innerWidth);
+}
+
+const tween = gsap.to(races, {
+	x: getScrollAmount,
+	duration: 3,
+	ease: "none",
 });
+
+
+ScrollTrigger.create({
+	trigger:".racesWrapper",
+	start:"top 20%",
+	end: () => `+=${getScrollAmount() * -1}`,
+	pin:true,
+	animation:tween,
+	scrub:1,
+	invalidateOnRefresh:true,
+	markers:true
+})
+
 
