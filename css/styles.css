@@ -1,51 +1,49 @@
-@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
-
-
+html {
+  overflow-y: scroll;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+}
 body {
-	margin:0;
-	background:#15151e;
-	overflow-x:hidden;
+  overflow-y: visible;
+  position: relative;
+  height: unset;
+}
+html, body {
+  overflow-x: hidden;
+  margin: 0;
 }
 
-
-
-.races {
-	width:fit-content;
-	display:flex;
-	flex-wrap:nowrap;
+.container {
+  width: 400%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: nowrap;
 }
 
-.races .Part {
-	font-family: 'Staatliches', cursive;
-	font-size:30vw;
-	flex-shrink:0;
-	padding-right:0.3em;
-	padding-left:0.3em;
-	color:#e10600;
-	
-	margin:0;	
+.firstContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: yellow;
 }
 
-.races .Part :last-of-type {
-	background:#e1e1ff;
+.lastContainer {
+  display: flex;
+  height: 100vh;
+  background: yellow;
+} 
+
+.pandel{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
 }
 
-.lightBG {
-	background:#313143;
-}
-
-.space-20vh {
-	height:20vh;
-}
-
-.space-30vh {
-	height:30vh;
-}
-
-.space-50vh {
-	height:50vh;
-}
-
-.space-100vh {
-	height:100vh;
+.red{
+  background-color: red;
 }
