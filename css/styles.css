@@ -1042,8 +1042,11 @@ article {
 
   .FaceImage {
     margin-left: 300px;
-    margin-bottom: 150px;
-    width: 600px;
+    margin-bottom: 120px;
+    width: 700px;
+  }
+  .MainFaceImageContainer {
+    margin-top: 110px;
   }
 }
 
@@ -1053,7 +1056,7 @@ article {
   .FaceImage {
     margin-left: 250px;
     margin-bottom: 150px;
-    width: 500px;
+    width: 600px;
   }
 
   .defaultSection .hero1Text {
@@ -1074,13 +1077,17 @@ article {
     font-size: 25px;
     /* Responsive font size */
   }
+
+  .MainFaceImageContainer {
+    margin-top: 150px;
+  }
 }
 
 @media (min-width: 1300px) and (max-width: 1800px) {
   .FaceImage {
     margin-left: 200px;
-    margin-bottom: 150px;
-    width: 400px;
+    margin-bottom: 10px;
+    width: 550px;
   }
 
   .defaultSection .hero1Text {
@@ -1104,32 +1111,6 @@ article {
 
 }
 
-@media (min-width: 900px) and (max-width: 1300px) {
-  .FaceImage {
-    margin-left: 150px;
-    margin-bottom: 150px;
-    width: 300px;
-  }
-
-  .defaultSection .hero1Text {
-    font-size: 35px;
-  }
-
-  .defaultSection .title1Text {
-    font-size: 35px;
-    /* Responsive font size */
-  }
-
-  .defaultSection .under1text {
-    font-size: 15px;
-    /* Responsive font size */
-  }
-
-  .defaultSection p {
-    font-size: 15px;
-    /* Responsive font size */
-  }
-}
 
 @media (min-width: 900px) and (max-width: 1300px) {
 
@@ -1151,6 +1132,15 @@ article {
     margin-top: 400px;
     width: 600px;
     top: 100px;
+  }
+
+  .about-img{
+    padding-right: 00px;
+  
+    margin-bottom: 10px;
+    width: 40vw;
+    outline: white;
+    margin-top: 10px;
   }
 
   .defaultSection .hero1Text {
@@ -1205,6 +1195,7 @@ article {
     width: 450px;
     top: 100px;
   }
+  
 
   .defaultSection .hero1Text {
     font-size: 40px;
@@ -1240,6 +1231,19 @@ article {
     margin-left: 15rem;
     display: flex;
     justify-content: center;
+  }
+
+  .about-img{
+    padding-right: 200px;
+  
+    margin-bottom: 150px;
+    width: 40vw;
+    outline: white;
+  }
+
+  .MainFaceImageContainer {
+    margin-top: 150px;
+    width: 400px;
   }
 
   
@@ -1364,6 +1368,10 @@ article {
 
   .MainFaceImageContainer {
     margin-bottom: 00px;
+  }
+
+  .FaceImage .about-img{
+    width: 300px;
   }
 
   .FaceImage {
