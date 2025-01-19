@@ -1190,7 +1190,7 @@ article {
   }
 
   .FaceImage {
-    margin-left: 10px;
+    margin-left: -10px;
     margin-top: 400px;
     width: 450px;
     top: 100px;
@@ -1234,10 +1234,11 @@ article {
   }
 
   .about-img{
-    padding-right: 200px;
+    padding-right: 00px;
   
-    margin-bottom: 150px;
-    width: 40vw;
+    margin-bottom: 00px;
+    margin-top: -100px;
+    width: 70vw;
     outline: white;
   }
 
@@ -1371,7 +1372,7 @@ article {
   }
 
   .FaceImage .about-img{
-    width: 300px;
+    width: 400px;
   }
 
   .FaceImage {
